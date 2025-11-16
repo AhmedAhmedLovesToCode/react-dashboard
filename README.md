@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+📊 Interactive Data Visualization Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern React.js dashboard that visualizes live Crypto, Stock Market, and NBA Game data using real-time APIs.
+Built with a clean UI, reusable components, smooth interactions, and responsive design.
 
-## Available Scripts
+🚀 Features
+🔹 Crypto Dashboard
 
-In the project directory, you can run:
+Real-time price data using Alpha Vantage Crypto API
 
-### `npm start`
+Candlestick/line charts with Recharts
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Metric cards showing key stats (open, high, low, close)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Time-range selector (1D / 5D / 1M / 3M / 1Y)
 
-### `npm test`
+📈 Stocks Dashboard
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Live stock market data using Alpha Vantage Stock API
 
-### `npm run build`
+Fully interactive price charts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Performance snapshots and historical views
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🏀 Sports Dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+NBA game schedules and scores using BallDontLie API
 
-### `npm run eject`
+User can select any date to view games
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Cards display:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Home vs away team
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Status (Scheduled / Final)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tipoff time
 
-## Learn More
+Score
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🌐 Modern UI & UX
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React functional components
 
-### Code Splitting
+Modular pages: /crypto, /stocks, /sports
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Dark theme with soft gradients
 
-### Analyzing the Bundle Size
+Clean navigation with tab switching
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Fully responsive for desktop & mobile
