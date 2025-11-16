@@ -1,51 +1,43 @@
-📊 Interactive Data Visualization Dashboard
+# ⭐ Interactive Data Visualization Dashboard
 
-A modern React.js dashboard that visualizes live Crypto, Stock Market, and NBA Game data using real-time APIs.
-Built with a clean UI, reusable components, smooth interactions, and responsive design.
+A React-based dashboard that visualizes **live Crypto, Stock, and NBA game data** using external APIs.  
+Users can switch between data panels, adjust time ranges, and (for sports) pick a date to view scheduled or completed games.
 
-🚀 Features
-🔹 Crypto Dashboard
+---
 
-Real-time price data using Alpha Vantage Crypto API
+## ✨ Features
 
-Candlestick/line charts with Recharts
+- 📈 **Crypto Dashboard**
+  - Pulls real-time crypto data from the **CoinGecko API**
+  - Interactive line chart for price history (1D / 1W / 1M / 1Y)
+  - Metric cards for current price, 24h change, high, and low
 
-Metric cards showing key stats (open, high, low, close)
+- 💹 **Stocks Panel**
+  - Ready to integrate with **Alpha Vantage** or other stock APIs
+  - Reuses shared chart + metric components
+  - Example setup with `GLOBAL_QUOTE` endpoint
 
-Time-range selector (1D / 1W / 1M / 1Y)
+- 🏀 **NBA Sports Panel**
+  - Fetches NBA games from the **BallDontLie API**
+  - Date picker lets users choose which day’s games to view
+  - Clean card layout: home vs away, status, tipoff time, and score
 
-📈 Stocks Dashboard
+- 🎨 **UI / UX**
+  - Dark theme with accent colors, responsive layout
+  - Hover effects and card-based design for a modern, dashboard feel
+  - Modular components for easy extension
 
-Live stock market data using Alpha Vantage Stock API
+---
 
-Fully interactive price charts
+## 🛠️ Tech Stack
 
-Performance snapshots and historical views
+- **Frontend:** React (Create React App), JavaScript
+- **Charts:** Recharts
+- **Date handling:** Day.js
+- **APIs:**
+  - [CoinGecko](https://www.coingecko.com/en/api/documentation) – crypto prices
+  - [Alpha Vantage](https://www.alphavantage.co/documentation/) – stock data (configurable)
+  - [BallDontLie](https://balldontlie.io/) – NBA games data
+- **Tools:** Git, GitHub, VS Code, npm
 
-🏀 Sports Dashboard
 
-NBA game schedules and scores using BallDontLie API
-
-User can select any date to view games
-
-Cards display:
-
-Home vs away team
-
-Status (Scheduled / Final)
-
-Tipoff time
-
-Score
-
-🌐 Modern UI & UX
-
-React functional components
-
-Modular pages: /crypto, /stocks, /sports
-
-Dark theme with soft gradients
-
-Clean navigation with tab switching
-
-Fully responsive for desktop & mobile
