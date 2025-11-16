@@ -1,13 +1,202 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Root color tokens for easy theming */
+:root {
+  --bg: #0f1115;
+  --card: #161920;
+  --text: #e7e9ee;
+  --muted: #a9afc3;
+  --accent: #4da3ff;
+  --chip: #212634;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Global resets + base look */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial,
+               "Apple Color Emoji","Segoe UI Emoji";
+}
+
+/* Layout container */
+.container { max-width: 1040px; margin: 0 auto; padding: 24px; }
+
+/* Header + tabs */
+.header { display:flex; align-items:center; justify-content:space-between; }
+.tabs { display:flex; gap:8px; }
+.tab {
+  background: var(--chip);
+  color: var(--text);
+  border: 1px solid #2a3042;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.tab.active { outline: 2px solid var(--accent); }
+
+/* Sections/rows */
+.section { margin-top: 20px; }
+.row { display:flex; gap:10px; align-items:center; }
+.space-between { justify-content: space-between; }
+
+/* Selects */
+.select {
+  background: var(--chip);
+  color: var(--text);
+  border: 1px solid #2a3042;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Card container */
+.card {
+  background: var(--card);
+  border: 1px solid #252a3a;
+  border-radius: 12px;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+/* Metric grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0;
+}
+.metric { background: var(--card); border: 1px solid #252a3a; border-radius: 10px; padding: 10px; }
+.metric-label { color: var(--muted); font-size: 12px; }
+.metric-value { font-size: 20px; font-weight: 600; margin-top: 4px; }
+
+/* Chips (time-range buttons) */
+.chip {
+  background: var(--chip);
+  border: 1px solid #2a3042;
+  color: var(--text);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.chip-active { outline: 2px solid var(--accent); }
+
+/* Muted text */
+.muted { color: var(--muted); }
+
+/* -------- SPORTS / NBA LIST -------- */
+
+.games-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* Game card overrides: a bit softer and floaty */
+.game-card {
+  border-radius: 18px;
+  padding: 16px 20px;
+  background: radial-gradient(circle at top left, #1b2131, #11141d);
+  border: 1px solid #252a3a;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    border-color 0.12s ease, background 0.12s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.6);
+  border-color: var(--accent);
+  background: radial-gradient(circle at top left, #20263a, #11141d);
+}
+
+/* Top row: teams + status pill */
+.game-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Teams text */
+.game-teams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.team-name {
+  white-space: nowrap;
+}
+
+.vs {
+  opacity: 0.8;
+}
+
+/* Status pill on the right */
+.status-pill {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #2a3042;
+  background: rgba(255, 193, 7, 0.12); /* yellow-ish */
+  color: #ffc857;
+}
+
+/* Bottom row: time + score */
+.game-meta 
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.game-row:hover
+{
+  cursor: pointer;
+}
+
+.game-score 
+{
+  font-weight: 500;
+}
+
+/* Mobile: stack meta vertically */
+@media (max-width: 640px) 
+{
+  .game-meta 
+  {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* Date picker row for Sports tab */
+.date-row 
+{
+  margin-top: 8px;
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+/* Styled <input type="date"> to match dark theme */
+.date-input 
+{
+  background: var(--chip);
+  border: 1px solid #2a3042;
+  color: var(--text);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
+.date-input:focus 
+{
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }

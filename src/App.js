@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import Header from "./components/Header";
+import Crypto from "./pages/Crypto";
+import Sports from "./pages/Sports";
+import Stocks from "./pages/Stocks";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+export default function App()   // Stores the current tab/page
+{
+  const[tab, setTab] = useState("crypto");
+
+
+  return(
+    
+    <div className="container">
+      <Header current={tab} onChange={setTab}/>
+      {tab == "crypto" && <Crypto/>}
+      {tab == "stocks" && <Stocks/>}
+      {tab == "sports" && <Sports/>}
     </div>
   );
 }
-
-export default App;
