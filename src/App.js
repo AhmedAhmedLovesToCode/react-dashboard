@@ -13,9 +13,9 @@ export default function App()   // Stores the current tab/page
     
     <div className="container">
       <Header current={tab} onChange={setTab}/>
-      {tab == "crypto" && <Crypto/>}
-      {tab == "stocks" && <Stocks/>}
-      {tab == "sports" && <Sports/>}
+      {tab === "crypto" && <Crypto/>}
+      {tab === "stocks" && <Stocks/>}
+      {tab === "sports" && <Sports/>}
     </div>
   );
 }

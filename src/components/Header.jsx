@@ -22,7 +22,7 @@ export default function Header({current, onChange})
                 {tabs.map((t) => ( // (map) loops through all the tabs (t is our iterable)
                     <button 
                         key = {t} // Required for lists so React can track each button 
-                        className = {`tab ${current == t ? "active" : ""} `} // Highlights our current tab
+                        className = {`tab ${current === t ? "active" : ""} `} // Highlights our current tab
                         onClick = {() => onChange(t)} // When clicked, switches tab
                     >
                         {t.toUpperCase()} 
