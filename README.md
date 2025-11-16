@@ -12,7 +12,7 @@ Candlestick/line charts with Recharts
 
 Metric cards showing key stats (open, high, low, close)
 
-Time-range selector (1D / 5D / 1M / 3M / 1Y)
+Time-range selector (1D / 1W / 1M / 1Y)
 
 📈 Stocks Dashboard
 
